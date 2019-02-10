@@ -1,0 +1,12 @@
+﻿  stdafx.cpp
+  Binary.cpp
+  Node.cpp
+  Tree.cpp
+Tree.cpp(232): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Tree.cpp(233): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+Tree.cpp(239): warning C4018: '<': signed/unsigned mismatch
+Tree.cpp(282): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  All 232 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Binary.vcxproj -> C:\Users\Olga Turcan\Desktop\UBB\Sem 2\OOP\Lab3\Release\Binary.exe

@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  Binary.cpp
+  Node.cpp
+  Tree.cpp
+d:\ubb\sem 2\oop\lab3\binary\tree.cpp(233): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\ubb\sem 2\oop\lab3\binary\tree.cpp(234): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\ubb\sem 2\oop\lab3\binary\tree.cpp(240): warning C4018: '<': signed/unsigned mismatch
+d:\ubb\sem 2\oop\lab3\binary\tree.cpp(283): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  Binary.vcxproj -> D:\UBB\Sem 2\OOP\Lab3\Debug\Binary.exe
