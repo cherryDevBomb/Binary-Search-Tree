@@ -4,7 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <iostream>
-using namespace std;
+#include <iomanip>
 
 
 //constructor
@@ -118,7 +118,7 @@ void Tree::delete_root()
 void Tree::remove(int v, Node * tree)
 {
 	if (tree == NULL) {
-		cout << "The tree doesn't contain value " << v;
+		std::cout << "The tree doesn't contain value " << v;
 		return; //BST doesn't contain value v
 	}
 
@@ -224,7 +224,7 @@ int Tree::height(Node * n)
 	}
 }
 
-//method for printing BST
+//helper method for printing BST
 void Tree::print_line(vector<Node*> this_line, int h)
 {
 	if (h == 1)
@@ -234,29 +234,29 @@ void Tree::print_line(vector<Node*> this_line, int h)
 	int between_spaces = pow(2, h) - 1; //number of spaces between nodes on a line
 	
 	for (int i = 0; i < spaces; i++)
-		cout << " ";
+		std::cout << "  ";
 
 	vector<Node*> next_line;
 	for (int i = 0; i < this_line.size(); i++) {
 		if (this_line[i] != NULL) {
 			if (this_line[i]->left == NULL) { //node has no left child
-				cout << " ";
+				std::cout << "  ";
 				next_line.push_back(NULL);
 			}
 			else {
-				cout << this_line[i]->left->key; //print child value and save in next_line list
+				std::cout << setw(2) << this_line[i]->left->key; //print child value and save in next_line list
 				next_line.push_back(this_line[i]->left);
 			}
 
 			for (int i = 0; i < between_spaces; i++) //space between nodes
-				cout << " ";
+				std::cout << "  ";
 
 			if (this_line[i]->right == NULL) { //node has no right child
-				cout << " ";
+				std::cout << "  ";
 				next_line.push_back(NULL);
 			}
 			else {
-				cout << this_line[i]->right->key; //print child value and save in next_line list
+				std::cout << setw(2) << this_line[i]->right->key; //print child value and save in next_line list
 				next_line.push_back(this_line[i]->right);
 			}
 		}
@@ -264,13 +264,13 @@ void Tree::print_line(vector<Node*> this_line, int h)
 			next_line.push_back(NULL); //NULL node has no children
 			next_line.push_back(NULL); 
 			for (int i = 0; i < between_spaces + 2; i++)
-				cout << " ";
+				std::cout << "  ";
 		}
 		
 		for (int i = 0; i < between_spaces; i++) //space between nodes
-			cout << " ";
+			std::cout << "  ";
 	}
-	cout << endl << endl;
+	std::cout << endl << endl;
 	this_line = next_line; //reassign next line to current line
 	print_line(this_line, h - 1);
 }
@@ -284,8 +284,8 @@ void Tree::print(Node * tree)
 
 	if (tree == root) {
 		for (int i = 0; i < spaces; i++)
-			cout << " ";
-		cout << root->key << endl << endl;
+			std::cout << "  ";
+		std::cout << root->key << endl << endl;
 		vector<Node*> this_line = {root};
 		print_line(this_line, h);
 	}
